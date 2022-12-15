@@ -10,12 +10,12 @@ function Portfolio() {
             </div>
             <div className="grid grid-cols-12">
                 
-                    <Project name='Something'/>
-                    <Project name='Something1'/>
-                    <Project name='Something2'/>
-                    <Project name='Something3'/>
-                    <Project name='Something4'/>
-                    <Project name='Something5'/>
+                    <Project name='Something' url='https://www.github.com/mecuboi' img='http://t0.gstatic.com/licensed-image?q=tbn:ANd9GcTbFS-Eb6WAixewVPFo2P5F_PcDdi0DZndApQxbLyuCBmA9JLhjhClvwjYZS-JRe5hp7BQExiiX8KSSMBE'/>
+                    <Project name='Something1' url='https://www.github.com/mecuboi'/>
+                    <Project name='Something2' url='https://www.github.com/mecuboi'/>
+                    <Project name='Something3' url='https://www.github.com/mecuboi'/>
+                    <Project name='Something4' url='https://www.github.com/mecuboi'/>
+                    <Project name='Something5' url='https://www.github.com/mecuboi'/>
 
             </div>
             <div>
