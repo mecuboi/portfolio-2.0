@@ -1,10 +1,19 @@
 import React from 'react';
+import Navigation from './Navigation'
 
 function Header() {
   return (
-    <header className="header bg-dark">
-      <h1 className="text-3xl font-bold underline">Home</h1>
-    </header>
+    
+<nav className="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded bg-gray-600">
+  <div className="container flex flex-wrap items-center justify-between mx-auto">
+    <a href="#" className="flex items-center">
+        <span className="self-center text-2xl text-yellow-400 font-semibold whitespace-nowrap">Matthew Jusuf</span>
+    </a>
+
+   <Navigation/>
+  </div>
+</nav>
+
   );
 }
 
