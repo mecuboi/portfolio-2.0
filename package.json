@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://mecuboi.github.io/portfolio-2.0",
   "dependencies": {
+    "@fontsource/roboto": "^4.5.8",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^13.5.0",
