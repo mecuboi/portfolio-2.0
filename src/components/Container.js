@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import About from './pages/About'
 import Portfolio from './pages/Portfolio'
 import Resume from './pages/Resume'
-// import Contact from './pages/Contact'
+import Contact from './pages/Contact'
 import Navigation from './Navigation'
 import Header from './Header'
 
@@ -22,7 +22,7 @@ export default function Container() {
           if (currentPage === 'Resume') {
             return <Resume />;
           }
-        //   return <Contact />;
+          return <Contact />;
     };
 
     const handlePageChange = (page) => setCurrentPage(page);
