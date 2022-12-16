@@ -12,7 +12,7 @@ function Resume() {
         <div className='grid grid-cols-12'>
             
             <div className="col-span-12 m-auto mt-3">
-                <AllPages pdf={resumeLink} className="max-w-screen"/>
+                <AllPages pdf={resumeLink} className=""/>
                 
             </div>
             <div className='col-span-12 m-auto mt-4'>

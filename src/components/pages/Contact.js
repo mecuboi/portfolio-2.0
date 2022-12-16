@@ -17,8 +17,8 @@ const test = 'https://drive.google.com/file/d/1j7_gkbnGTYB5X1TKfiYvBh5b5bK3NOrV/
 
   return (
     <div>
-      <Document file={resumeLink} onLoadSuccess={onDocumentLoadSuccess} renderTextLayer="false">
-        <Page pageNumber={pageNumber} />
+      <Document file={resumeLink} onLoadSuccess={onDocumentLoadSuccess} >
+        <Page pageNumber={pageNumber} width='1000' />
       </Document>
       <p>
         Page {pageNumber} of {numPages}
