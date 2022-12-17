@@ -31,14 +31,14 @@ function Portfolio() {
                     <Project 
                     name='Social-Network DB' 
                     url='https://github.com/mecuboi/Social-Network_Db' 
-                    img='https://github.com/mecuboi/weather-forecast-app/raw/main/assets/images/screenshot.png'
+                    img='https://github.com/mecuboi/portfolio-2.0/blob/main/public/Screen%20Shot%202022-12-17%20at%205.08.57%20pm.png?raw=true'
                     description='This is a backend app that manages a social media database'
                     />
                     <Project 
-                    name='Weather Forecast App' 
-                    url='https://github.com/mecuboi/weather-forecast-app' 
-                    img='https://github.com/mecuboi/weather-forecast-app/raw/main/assets/images/screenshot.png'
-                    description='Check the weather around the world using this app and keep track of the cities you have "visited"'
+                    name='Simply Blog' 
+                    url='https://github.com/mecuboi/simple-blog' 
+                    img='https://github.com/mecuboi/simple-blog/raw/main/public/images/home.png'
+                    description='A platform with a simple UI and intuitive layout for people to read and share ideas'
                     />
                     <Project 
                     name='Weather Forecast App' 
