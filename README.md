@@ -1,5 +1,7 @@
 # Portfolio
 
+![HOMEPAGE](./src/images/homepage.png)
+
 This is my personal website that describes me and shows a couple of my portfolio. It also have links to my social medias and a form that you can fill in to contact me.
 
 ## Tech used
