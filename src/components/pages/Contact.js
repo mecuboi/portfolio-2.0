@@ -6,25 +6,115 @@ import 'react-pdf/dist/esm/Page/AnnotationLayer.css'
 
 
 function Contact() {
-  const [numPages, setNumPages] = useState(null);
-  const [pageNumber, setPageNumber] = useState(1);
-  const resumeLink = "https://raw.githubusercontent.com/mecuboi/portfolio-2.0/2760bf58b34a08deb143fa2bda770d6c5914f81b/src/images/resume.pdf"
-const test = 'https://drive.google.com/file/d/1j7_gkbnGTYB5X1TKfiYvBh5b5bK3NOrV/view?usp=share_link'
 
-  function onDocumentLoadSuccess({ numPages }) {
-    setNumPages(numPages);
-  }
+    const [name, setName] = useState('')
+    const [email, setEmail] = useState('')
+    const [message, setMessage] = useState('')
+    const [textBoxName, setTextBoxName] = useState('bg-gray-50 border border-gray-300 text-gray-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5')
+    const [textBoxEmail, setTextBoxEmail] = useState('bg-gray-50 border border-gray-300 text-gray-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5')
+    const [textBoxMessage, setTextBoxMessage] = useState('bg-gray-50 border border-gray-300 text-gray-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5')
+    const [placeholderName, setPlaceholderName] = useState('')
+    // const [placeholderEmail, setPlaceholderEmail] = useState('')
+    const [placeholderMessage, setPlaceholderMessage] = useState('')
+    const validEmail = document.querySelector('#valid-email')
 
-  return (
-    <div>
-      <Document file={resumeLink} onLoadSuccess={onDocumentLoadSuccess} >
-        <Page pageNumber={pageNumber} width='1000' />
-      </Document>
-      <p>
-        Page {pageNumber} of {numPages}
-      </p>
-    </div>
-  );
+    function handleChange(e) {
+        if (e.target.id === 'name') {
+            setName(e.target.value)
+        } else if (e.target.id === 'email') {
+            setEmail(e.target.value)
+            if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(e.target.value)) {
+                console.log('valid email')
+                setTextBoxEmail('bg-gray-50 border border-gray-300 text-gray-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5')
+                validEmail.classList.add('hidden')
+            } else {
+                setTextBoxEmail('bg-red-50 border border-red-500 text-red-900 placeholder-red-700 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5')
+                validEmail.classList.remove('hidden')
+            }
+        } else {
+            setMessage(e.target.value)
+        }  
+    }
+
+    function handleBlur(e) {
+        if(e.target.id === "name" && !e.target.value) {
+            setTextBoxName('bg-red-50 border border-red-500 text-red-900 placeholder-red-700 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5')
+            setPlaceholderName('Please fill your name here')
+        } else if(e.target.id === "name" && e.target.value) {
+            setTextBoxName('bg-gray-50 border border-gray-300 text-gray-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5')
+        }
+        
+        if (e.target.id === "email" && !e.target.value) {
+            setTextBoxEmail('bg-red-50 border border-red-500 text-red-900 placeholder-red-700 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5')
+            // setPlaceholderEmail('Please fill in your email here')
+            validEmail.classList.remove('hidden')
+        } else if(e.target.id === "email" && e.target.value && /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(e.target.value)) {
+            setTextBoxEmail('bg-gray-50 border border-gray-300 text-gray-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5')
+            validEmail.classList.add('hidden')
+        }
+        
+        if (e.target.id === "message" && !e.target.value) {
+            setTextBoxMessage('bg-red-50 border border-red-500 text-red-900 placeholder-red-700 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5')
+            setPlaceholderMessage('Please enter your message here')
+        } else if(e.target.id === "message" && e.target.value) {
+            setTextBoxMessage('bg-gray-50 border border-gray-300 text-gray-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5')
+        }
+    }
+
+
+    return (
+        <div className="grid grid-cols-12">
+            <h3 className="col-span-12 text-center font-medium text-gray-700 mt-5 mb-2">Fill in the form below to reach out to me:</h3>
+            <form className="col-span-12 m-2 p-2 md:col-start-4 md:col-end-10">
+                <div className="mb-6">
+                    <label htmlFor="name" className="block mb-2 text-sm font-medium text-gray-900 ">Name</label>
+                    <input
+                        type="text"
+                        id="name"
+                        className={textBoxName}
+                        required
+                        value={name}
+                        placeholder={placeholderName}
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                    />
+                </div>
+                <div className="mb-6">
+                    <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900 ">Email</label>
+                    <input
+                        type="email"
+                        id="email"
+                        className={textBoxEmail}
+                        placeholder={"email@email.com"}
+                        required
+                        value={email}
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                    />
+                    <p className="mt-2 text-sm text-red-600 dark:text-red-500 hidden" id="valid-email">Please enter a valid email address</p>
+                </div>
+
+                <div className="mb-6">
+                    <label htmlFor="large-input" className="block mb-2 text-sm font-medium text-gray-900 ">Message</label>
+                    <textarea
+                        type="text"
+                        id="message"
+                        className= {`h-48 ${textBoxMessage}`}
+                        value={message}
+                        placeholder={placeholderMessage}
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                    />
+                </div>
+                <button
+                    type="submit"
+                    className="text-white bg-yellow-500 hover:bg-yellow-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center "
+                >
+                    Submit</button>
+
+            </form>
+        </div>
+    );
 }
 
 export default Contact
