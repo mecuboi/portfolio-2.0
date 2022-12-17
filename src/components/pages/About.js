@@ -1,7 +1,7 @@
 import React from 'react'
 
 function About() {
-
+//to handle click on the social media icon
     function handleClick(e) {
         console.log(e.target.value)
         window.open(e.target.value, '_blank').focus()

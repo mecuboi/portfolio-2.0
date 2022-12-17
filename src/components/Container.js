@@ -7,7 +7,7 @@ import Navigation from './Navigation'
 import Header from './Header'
 
 
-
+//to generate the right page according to the currentPage value
 export default function Container() {
     const [currentPage, setCurrentPage] = useState('About');
 

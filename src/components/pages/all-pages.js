@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Document, Page, pdfjs } from "react-pdf";
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
+//function to generate the multiple pages of PDF
 
 export default function AllPages(props) {
   const [numPages, setNumPages] = useState(null);

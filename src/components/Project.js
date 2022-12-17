@@ -1,6 +1,6 @@
 import React from 'react'
 
-
+//to generate cards for the portfolio page
 function Project(props) {
     return (
 

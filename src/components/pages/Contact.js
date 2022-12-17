@@ -15,6 +15,7 @@ function Contact() {
     const validEmail = document.querySelector('#valid-email')
     const title = document.querySelector('#title')
 
+
 function validateEmail(text) {
     if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(text)) {
         return true
@@ -23,9 +24,11 @@ function validateEmail(text) {
     }
 }
 
+
 function handleClick(e) {
     e.preventDefault();
 
+    //if all areas are filled, it will reset the value and notify that message have been sent
     if (name && validateEmail(email) && message){
         setName('')
         setEmail('')
@@ -34,6 +37,7 @@ function handleClick(e) {
         return
     } 
 
+//each of the if code below sets the textbox to red if it's not filled and set placeholder to fill the blank
     if (!name) {
         setTextBoxName('bg-red-50 border border-red-500 text-red-900 placeholder-red-700 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5')
         setPlaceholderName('Please fill your name here')
@@ -52,6 +56,7 @@ function handleClick(e) {
 
 }
 
+//detects whether the value is filled or not and set the textbox appropriately and also setting the value when there's a change
     function handleChange(e) {
         if (e.target.id === 'name') {
             setName(e.target.value)
@@ -72,6 +77,8 @@ function handleClick(e) {
         }  
     }
 
+
+//changes the textbox to the appropriate color when mouse is clicked away
     function handleBlur(e) {
         if(e.target.id === "name" && !e.target.value) {
             setTextBoxName('bg-red-50 border border-red-500 text-red-900 placeholder-red-700 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5')
