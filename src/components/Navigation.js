@@ -8,6 +8,7 @@ function Navigation({currentPage, handlePageChange}) {
         <nav className="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded bg-gray-600">
         <div className="container flex flex-wrap items-center justify-between mx-auto">
           <a href="#about" className="flex items-center">
+          <img src="/logo192.png" alt="logo" className="p-3"/>
             <span
               className="self-center text-2xl text-yellow-500 font-semibold whitespace-nowrap"
               onClick={() => handlePageChange('About')}

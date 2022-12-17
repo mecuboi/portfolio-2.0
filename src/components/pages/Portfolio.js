@@ -32,7 +32,7 @@ function Portfolio() {
                     name='Social-Network DB' 
                     url='https://github.com/mecuboi/Social-Network_Db' 
                     img='https://github.com/mecuboi/portfolio-2.0/blob/main/public/Screen%20Shot%202022-12-17%20at%205.08.57%20pm.png?raw=true'
-                    description='This is a backend app that manages a social media database'
+                    description='This is a backend app that manages a social media database. The database includes User, Thoughts and Reactions'
                     />
                     <Project 
                     name='Simply Blog' 

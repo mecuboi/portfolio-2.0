@@ -10,7 +10,7 @@ function About() {
     return (
         <div>
             <div className="grid grid-cols-12">
-                <h2 className="header text-gray-500 col-span-12 text-center lg:text-4xl md:text-3xl text-2xl font-extrabold p-5"><span className="wave" role="img" aria-labelledby="wave">
+                <h2 className="header text-gray-500 col-span-12 text-center lg:text-4xl md:text-3xl text-2xl font-extrabold p-5"><span className="wave animate-pulse" role="img" aria-labelledby="wave">
                     👋🏻
                 </span> Hi! My name is</h2>
                 <h1 className="header text-yellow-500 col-span-12 text-center mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl lg:text-6xl p-5">Matthew Jusuf</h1>
@@ -32,7 +32,7 @@ function About() {
                 </p>
 
                 <p className="my-4 mx-1 px-2 text-lg text-gray-500 col-span-12 md:col-start-3 md:col-end-11">
-                    Here is a random picture of my cute dog Soju
+                    Here is a random picture of a dog which would be replaced with a pic of me coding or visual art of me if I have a good one
                 </p>
                 <img className="col-span-12 m-1 md:col-start-2 md:col-end-12"src='https://image.cnbcfm.com/api/v1/image/105992231-1561667465295gettyimages-521697453.jpeg?v=1561667497'></img>
                 <p className="my-10 mx-auto px-2 text-2xl text-yellow-500 col-span-12 ">Find me on:</p>
