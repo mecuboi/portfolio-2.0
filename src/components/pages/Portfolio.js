@@ -37,14 +37,14 @@ function Portfolio() {
                     <Project 
                     name='Simply Blog' 
                     url='https://github.com/mecuboi/simple-blog' 
-                    img='https://github.com/mecuboi/simple-blog/raw/main/public/images/home.png'
+                    img='https://github.com/mecuboi/portfolio-2.0/blob/main/public/Screen%20Shot%202022-12-17%20at%205.18.43%20pm.png?raw=true'
                     description='A platform with a simple UI and intuitive layout for people to read and share ideas'
                     />
                     <Project 
-                    name='Weather Forecast App' 
-                    url='https://github.com/mecuboi/weather-forecast-app' 
+                    name='Regex 101' 
+                    url='https://gist.github.com/mecuboi/9843a5f3669939604e6b2bef1737dcab' 
                     img='https://github.com/mecuboi/weather-forecast-app/raw/main/assets/images/screenshot.png'
-                    description='Check the weather around the world using this app and keep track of the cities you have "visited"'
+                    description='A quick and brief tutorial on the basics of Regex. Hope you find this tutorial helpful'
                     />
                     
 
