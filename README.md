@@ -8,9 +8,9 @@ This website is created using react and tailwind CSS.
 
 ## Deployed Link
 
-If you wish to open up the app straight from the website, please click on the link below:
+Here is the deployed link for the website:
 
-https://jate-prototype.herokuapp.com/
+https://mecuboi.github.io/portfolio-2.0/
 
 
 ## Credit
