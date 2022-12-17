@@ -55,6 +55,7 @@ function handleClick(e) {
     function handleChange(e) {
         if (e.target.id === 'name') {
             setName(e.target.value)
+            setTextBoxName('bg-gray-50 border border-gray-300 text-gray-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5')
         } else if (e.target.id === 'email') {
             setEmail(e.target.value)
             if (validateEmail(e.target.value)) {
@@ -67,6 +68,7 @@ function handleClick(e) {
             }
         } else {
             setMessage(e.target.value)
+            setTextBoxMessage('bg-gray-50 border border-gray-300 text-gray-800 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5')
         }  
     }
 

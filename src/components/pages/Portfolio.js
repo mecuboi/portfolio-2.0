@@ -43,7 +43,7 @@ function Portfolio() {
                     <Project 
                     name='Regex 101' 
                     url='https://gist.github.com/mecuboi/9843a5f3669939604e6b2bef1737dcab' 
-                    img='https://github.com/mecuboi/weather-forecast-app/raw/main/assets/images/screenshot.png'
+                    img='https://github.com/mecuboi/portfolio-2.0/blob/main/public/Screen%20Shot%202022-12-17%20at%205.25.39%20pm.png?raw=true'
                     description='A quick and brief tutorial on the basics of Regex. Hope you find this tutorial helpful'
                     />
                     
